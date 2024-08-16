@@ -468,21 +468,29 @@ margin-left: 50px;
     .Portfolio h2, 
     .contact h2 {
         font-size: 18px;
+        text-align: center; /* Center align the title */
+        margin-bottom: 5px; /* Add some space below the title */
     }
+
     .about h2 i, 
     .Skills h2 i, 
     .Portfolio h2 i, 
-    .contact h2 i{
+    .contact h2 i {
         font-size: 18px;
-       padding-top:10px;
+        padding-top: 10px;
     }
+
     .about hr, 
     .Skills hr, 
     .Portfolio hr, 
-    .contact hr{
-        font-size: 1x;
-        margin :5px;
+    .contact hr {
+        width: 50px;
+        height: 2px; /* Set height for hr */
+        background-color: #000; /* Set the color of the hr */
+        border: none; /* Remove default border */
+        margin: 5px auto; /* Center the hr and add margin */
     }
+
     .about .content {
         grid-template-columns: 1fr;
         font-size: 10px;
