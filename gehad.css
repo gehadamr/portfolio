@@ -63,7 +63,7 @@ header {
 section {
     padding: 100px 200px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in width */
+    box-sizing: border-box; 
 }
 
 /* Main section styling */
@@ -71,8 +71,8 @@ section {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    justify-content: flex-start; /* Align content to the start (left) */
-    align-items: center; /* Center content vertically */
+    justify-content: flex-start; 
+    align-items: center; 
     background: url(websiteBackground.jpeg) no-repeat;
     background-size: cover;
     background-position: center;
@@ -97,7 +97,6 @@ section {
     padding: 10px;
 
 }
-
 .main h2 span {
     display: inline-block;
     color: aquamarine;
@@ -122,7 +121,7 @@ section {
 }
 .main .butt:hover{
     background-color: #de0b74;
-    transform: scale(1.1);/* add 10% on the scale  i use */
+    transform: scale(1.1);
     box-shadow:  10px  10px  10px#ccc; 
 }
 
@@ -142,7 +141,7 @@ section {
 
  .box:hover{
     background-color: rgb(18, 34, 62);
-    transform: scale(1.1);/* add 10% on the scale  i use */
+    transform: scale(1.1);
     box-shadow:  10px  10px  10px#ccc;
     
 }
@@ -325,7 +324,7 @@ section {
 .Portfolio .containter .row .item{
     background-color: whitesmoke;
     border-radius: 5px;
-    overflow: hidden; /* Ensures no content overflow */
+    overflow: hidden; 
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
@@ -405,109 +404,88 @@ margin-left: 50px;
     padding :10px 0;
  }
 
-
-
- /* tablet responsive */
-
-/* Responsive for Tablets */
-@media (max-width: 768px) {
+ @media (max-width: 768px) { 
+    /* Mobile styles */
     header {
         flex-direction: column;
+        align-items: flex-start;
         padding: 10px;
     }
 
     .logo {
-        font-size: 25px;
-        padding: 15px;
-    }
-
-    .nav-bar a {
-        font-size: 1.2em;
         padding: 10px;
-    }
-
-    section {
-        padding: 50px 100px;
-    }
-
-    .main {
-        flex-direction: column;
-        align-items: center;
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .main h2 {
-        font-size: 1.8em;
-    }
-
-    .main h2 span {
-        font-size: 1.4em;
-    }
-
-    .main .image {
-        width: 200px;
-        height: 200px;
-        margin-top: 20px;
-    }
-
-    .about .content {
-        grid-template-columns: 1fr;
-        row-gap: 2rem;
-    }
-
-    .about .content .col2 {
-        margin-top: 20px;
-    }
-
-    .Skills .content .row {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .Portfolio .containter .row {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .contact .row {
-        grid-template-columns: 1fr;
-        column-gap: 0;
-        margin-left: 0;
-        padding: 1rem 2rem;
-    }
-}
-
-/* Responsive for Mobile Phones */
-@media (max-width: 480px) {
-    .logo {
-        font-size: 20px;
-        padding: 10px;
+        font-size: 15px;
     }
 
     .nav-bar a {
         font-size: 1em;
-        padding: 5px;
+        padding: 8px 3px;
     }
 
+    /* Section */
     section {
-        padding: 30px 20px;
+        padding: 20px 15px;
+    }
+
+    .main {
+        padding-left: 10px;
+        background-attachment: scroll;
+    }
+
+    .main h1 {
+        font-size: 15px;
+    }
+
+    .main span {
+        display: block; 
+        font-size: 15px;
     }
 
     .main h2 {
-        font-size: 1.5em;
+        font-size: 15px;
     }
 
-    .main h2 span {
-        font-size: 1.2em;
+    .main .butt, .main .box {
+        padding: 0.75em 1.5em;
+        font-size: 0.75em;
     }
 
     .main .image {
         width: 150px;
         height: 150px;
+        margin: 0 auto;
     }
 
+    .main .image img {
+        width: 100%;
+        height: auto;
+        border: 5px solid #de6fac;
+        border-radius: 50%;
+    }
+    
+    .about h2, 
+    .Skills h2, 
+    .Portfolio h2, 
+    .contact h2 {
+        font-size: 18px;
+    }
+    .about h2 i, 
+    .Skills h2 i, 
+    .Portfolio h2 i, 
+    .contact h2 i{
+        font-size: 18px;
+       padding-top:10px;
+    }
+    .about hr, 
+    .Skills hr, 
+    .Portfolio hr, 
+    .contact hr{
+        font-size: 1x;
+        margin :5px;
+    }
     .about .content {
         grid-template-columns: 1fr;
+        font-size: 10px;
     }
 
     .Skills .content .row {
@@ -516,12 +494,94 @@ margin-left: 50px;
 
     .Portfolio .containter .row {
         grid-template-columns: 1fr;
-        gap: 10px;
+    }
+    
+    .Portfolio h2 {
+        margin: 0;
+        font-size: 18px; 
+    }
+
+    .Portfolio .containter .row .item {
+        margin: 0 10px; 
+    }
+
+    .contact h2 {
+        font-size: 18px; 
+    }
+    
+    .contact .row {
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 10px;
+    }
+
+    .contact .row img {
+        display: none; 
+    }
+
+    .contact .row input,
+    .contact .row textarea {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .logo {
+        padding: 15px;
+        font-size: 26px;
+    }
+
+    .nav-bar a {
+        font-size: 1.4em;
+        padding: 15px;
+    }
+
+    /* Section */
+    section {
+        padding: 70px 40px;
+    }
+    .main {
+        padding-left: 100px;
+        background-attachment: scroll;
+    }
+
+    .main h2 {
+        font-size: 28px;
+    }
+
+    .main .butt, .main .box {
+        padding: 0.875em 1.75em;
+        font-size: 1.1em;
+    }
+
+    .main .image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about .content {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .Skills .content .row {
+        grid-template-columns: (1fr);
+    }
+
+    .Portfolio .containter .row {
+        grid-template-columns:(1fr);
     }
 
     .contact .row {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        margin-left: 0;
+        grid-template-columns: 1fr 1fr; 
+        margin-left: 20px; 
     }
 }
